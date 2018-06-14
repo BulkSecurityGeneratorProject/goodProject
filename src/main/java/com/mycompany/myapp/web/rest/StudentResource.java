@@ -36,7 +36,7 @@ public class StudentResource {
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @Timed
-    @RolesAllowed(AuthoritiesConstants.ADMIN)
+    
     public void create(@RequestBody Student student) {
         log.debug("REST request to save Student : {}", student);
         studentRepository.save(student);
